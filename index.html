@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Machine Learning: Classification</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Machine Learning: Classification</h1>
+    <p>Explore K-Nearest Neighbors (KNN) and Logistic Regression</p>
+  </header>
+
+  <main>
+    <!-- Section 1: Theory -->
+    <section id="theory">
+      <h2>What is Machine Learning?</h2>
+      <p>Machine Learning is a field of study that involves creating algorithms and statistical models that enable computers to learn from and make predictions or decisions based on data, without being explicitly programmed. It focuses on developing techniques that allow systems to automatically improve their performance over time as more data becomes available.</p>
+
+      <h2>Classification in Machine Learning</h2>
+      <p>Classification is a type of supervised learning where the goal is to predict the categorical class labels of new instances based on past observations (training data). Two common classification algorithms are K-Nearest Neighbors (KNN) and Logistic Regression:</p>
+
+      <div class="algorithm">
+        <h3>K-Nearest Neighbors (KNN)</h3>
+        <p><strong>Definition:</strong> KNN is a non-parametric and instance-based learning algorithm used for classification and regression tasks. In classification, it assigns a class label to an instance based on the majority class of its k nearest neighbors in the feature space.</p>
+        <p><strong>Process:</strong> To classify a new instance, KNN calculates the distances to all training instances and selects the k nearest ones. The class label of the new instance is then determined by majority voting among its neighbors.</p>
+      </div>
+
+      <div class="algorithm">
+        <h3>Logistic Regression</h3>
+        <p><strong>Definition:</strong> Despite its name, logistic regression is a linear model used for binary classification tasks. It models the probability of the default class (usually the positive class) using a logistic function.</p>
+        <p><strong>Process:</strong> Logistic regression calculates the probability that a given instance belongs to a certain class using a logistic function, which maps any real-valued input to a value between 0 and 1. If the probability is above a certain threshold (often 0.5), the instance is classified as belonging to the positive class; otherwise, it is classified as belonging to the negative class.</p>
+      </div>
+    </section>
+
+    <!-- Section 2: Interactive Visualizations -->
+    <section id="visualization">
+      <h2>Interactive Visualizations</h2>
+      <div class="visualization-container">
+        <!-- Visualization 1: Interactive Logistic Regression -->
+        <div>
+          <h3>1. Logistic Regression Decision Boundary</h3>
+          <label for="threshold">Select Threshold:</label>
+          <select id="threshold">
+            <option value="0.3">0.3</option>
+            <option value="0.5">0.5</option>
+            <option value="0.7">0.7</option>
+          </select>
+          <canvas id="logistic-canvas" width="400" height="400"></canvas>
+        </div>
+
+        <!-- Visualization 2: Interactive KNN Classification -->
+        <div>
+          <h3>2. KNN Classification</h3>
+          <label for="k-value">Select K Value:</label>
+          <input type="number" id="k-value" min="1" max="10" value="3">
+          <canvas id="knn-canvas" width="400" height="400"></canvas>
+        </div>
+
+        <!-- Visualization 3: Decision Boundary Comparison -->
+        <div>
+          <h3>3. Decision Boundary Comparison</h3>
+          <p>Compare decision boundaries of KNN and Logistic Regression:</p>
+          <canvas id="comparison-canvas" width="400" height="400"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: KNN and Logistic Regression Applications -->
+    <section id="applications">
+      <h2>Applications of KNN and Logistic Regression</h2>
+      <h3>K-Nearest Neighbors (KNN)</h3>
+      <ul>
+        <li><strong>Recommendation Systems:</strong> KNN is widely used in recommendation engines, such as suggesting movies or products based on user similarity.</li>
+        <li><strong>Pattern Recognition:</strong> In image and speech recognition, KNN helps classify data based on similar features extracted from images or audio signals.</li>
+        <li><strong>Anomaly Detection:</strong> KNN can identify outliers or anomalies in data, such as fraudulent transactions in banking or network intrusions in cybersecurity.</li>
+      </ul>
+
+      <h3>Logistic Regression</h3>
+      <ul>
+        <li><strong>Binary Classification:</strong> Logistic Regression is commonly used for binary classification tasks like spam email detection (spam vs. non-spam).</li>
+        <li><strong>Medical Applications:</strong> Predicting the likelihood of a patient having a disease based on symptoms and medical history.</li>
+        <li><strong>Credit Scoring:</strong> Assessing the risk of default on a loan based on factors like income, credit history, and loan amount.</li>
+        <li><strong>Marketing:</strong> Predicting whether a customer will buy a product based on demographics and past buying behavior.</li>
+      </ul>
+
+      <p>These examples highlight how KNN and Logistic Regression are applied across various domains to solve classification and prediction problems effectively.</p>
+    </section>
+
+    <!-- Section 4: Practice Quiz -->
+    <section id="quiz">
+      <h2>Practice Quiz</h2>
+      <div class="quiz-container">
+        <div class="question">
+          <p>1. KNN is a parametric algorithm. (True/False)</p>
+          <input type="radio" name="q1" value="true"> True
+          <input type="radio" name="q1" value="false"> False
+          <span id="feedback1"></span>
+        </div>
+        <div class="question">
+          <p>2. Logistic Regression outputs probabilities. (True/False)</p>
+          <input type="radio" name="q2" value="true"> True
+          <input type="radio" name="q2" value="false"> False
+          <span id="feedback2"></span>
+        </div>
+        <button id="submit-quiz">Submit Quiz</button>
+      </div>
+    </section>
+
+    <!-- Section 5: Additional Resources -->
+    <section id="resources">
+      <h2>Additional Resources</h2>
+      <ul>
+        <li><a href="https://scikit-learn.org/stable/" target="_blank">Scikit-Learn Documentation</a></li>
+        <li><a href="https://towardsdatascience.com/knn-k-nearest-neighbors-1-a4707b24bd1d" target="_blank">KNN Explained</a></li>
+        <li><a href="https://developers.google.com/machine-learning/crash-course/logistic-regression/video-lecture" target="_blank">Logistic Regression Crash Course</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2023 Machine Learning Interactive Webpage</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
